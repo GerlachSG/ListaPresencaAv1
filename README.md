@@ -16,7 +16,7 @@ A aplicação permite que um docente selecione uma turma, carregue a lista de al
 
 ## 🚀 Como Usar
 
-1.  **Abra o Projeto:** A forma mais simples de usar é abrir o `[website](https://gerlachsg.github.io/ListaPresencaAv1/src/pages/index)` diretamente no seu navegador.
+1.  **Abra o Projeto:** A forma mais simples de usar é abrir o [website](https://gerlachsg.github.io/ListaPresencaAv1/src/pages/index) diretamente no seu navegador.
 2.  **Digite seu Nome:** Insira seu nome no campo "Nome:" no cabeçalho.
 3.  **Selecione a Turma:** Na parte inferior, escolha uma turma no menu de seleção (ex: "4ADS - Noite").
 4.  **Carregue os Alunos:** Clique no botão "CARREGAR TURMA". A lista de alunos aparecerá na tabela.
