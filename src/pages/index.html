@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Presença</title>
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+
+    <header>
+        <div class="cabecalho-superior">
+            <div class="campo-form">
+                <label for="input-docente">Nome:</label>
+                <input type="text" id="input-docente" placeholder="Digite seu nome">
+            </div>
+            <div class="campo-data">
+                <strong>Data:</strong>
+                <span id="data-atual">dd/mm/aaaa</span>
+            </div>
+        </div>
+        
+        <h1>Lista de Presença</h1>
+        <hr>
+        <h2 id="titulo-turma"></h2>
+    </header>
+
+    <main>
+        <section class="lista-alunos">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nomes</th>
+                        <th>Presença</th>
+                        <th>Observação</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-tbody">
+                </tbody>
+            </table>
+        </section>
+
+        <section class="acoes">
+            <button id="btn-salvar" class="btn-verde">SALVAR</button>
+            <button id="btn-limpar" class="btn-vermelho">LIMPAR</button>
+        </section>
+        
+        <section class="controles-turma">
+            <label for="select-turma">Selecione uma Turma:</label>
+            <select id="select-turma">
+                <option value="">-- Turmas --</option>
+            </select>
+            <button id="btn-carregar" class="btn-cinza">CARREGAR TURMA</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <div id="feedback-mensagem"></div>
+    </footer>
+
+    <script src="../script/script.js"></script>
+</body>
+</html>

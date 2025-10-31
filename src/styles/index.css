@@ -1,0 +1,242 @@
+/* --- 1. Configurações Gerais --- */
+/* Reseta margens e define o tamanho da fonte padrão */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    font-size: 18px; /* REQUSITO */
+    background-color: #FFFFFF; /* REQUSITO */
+    color: #333;
+    line-height: 1.5;
+}
+
+/* --- 2. Centralização do Conteúdo --- */ /* REQUSITO */
+/* Define uma largura máxima e centraliza o header e o main */
+header, main {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+}
+header {
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+main {
+    margin-top: 20px;
+}
+
+
+/* --- 3. Cabeçalho (Nome, Data, Títulos) --- */
+/* Alinha o "Nome" à esquerda e "Data" à direita */
+.cabecalho-superior {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; /* REQUSITO */
+    padding: 10px 0;
+}
+.campo-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.campo-data {
+    font-size: 1.1em;
+}
+/* Estilo padrão para caixas de texto e seleção */
+input[type="text"], select {
+    font-size: 1em;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+input#input-docente {
+    min-width: 300px;
+}
+/* Título principal "Lista de Presença" */
+header h1 {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 2em;
+}
+header hr {
+    border: 0;
+    border-top: 1px solid #E5E5E5;
+    margin: 15px 0;
+}
+/* Título da Turma (que aparece depois de carregar) */
+header h2#titulo-turma {
+    text-align: center;
+    font-size: 1.5em;
+    color: #555;
+    min-height: 1.2em; /* Evita que a página "pule" */
+}
+
+
+/* --- 4. Controles da Turma --- */
+/* Centraliza a seleção de turma e o botão "Carregar Turma" */ /* REQUSITO */
+.controles-turma {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px; 
+    padding-top: 20px;
+    border-top: 1px solid #E5E5E5;
+}
+
+
+/* --- 5. Tabela de Alunos --- */
+/* Estilos da tabela, cabeçalho e células */
+.lista-alunos table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+.lista-alunos th,
+.lista-alunos td {
+    padding: 12px;
+    border: 1px solid #E5E5E5;
+    vertical-align: middle;
+}
+.lista-alunos th {
+    background-color: #f7f7f7;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    color: #666;
+}
+/* Define larguras fixas para as colunas de "Presença" e "Observação" */
+.lista-alunos td:nth-child(2) { width: 150px; text-align: center; }
+.lista-alunos td:nth-child(3) { width: 35%; }
+
+.lista-alunos input.input-obs {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* --- 6. Lógica dos Botões [P] e [F] --- */
+.controle-presenca {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+/* Esconde o "radio button" verdadeiro (a bolinha feia) */
+.controle-presenca input[type="radio"] {
+    display: none;
+}
+/* Transforma o texto (label) "P" e "F" em botões clicáveis */
+.controle-presenca label {
+    display: inline-block;
+    width: 40px; 
+    height: 40px; 
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    font-weight: bold;
+    color: #777;
+    user-select: none;
+    transition: all 0.2s ease;
+}
+
+/* Aqui é onde a "mágica" dos botões [P] e [F] acontece:
+  - O primeiro bloco muda a cor para cinza (#eee) quando o mouse passa por CIMA de um botão.
+  - O segundo (presente:checked) muda a cor do botão [P] para VERDE se ele estiver MARCADO.
+  - O terceiro (falta:checked) muda a cor do botão [F] para VERMELHO se ele estiver MARCADO.
+*/
+.controle-presenca label:hover {
+    background-color: #eee;
+}
+.controle-presenca input[value="presente"]:checked + label {
+    background-color: #16A34A;
+    border-color: #16A34A;
+    color: white;
+}
+.controle-presenca input[value="falta"]:checked + label {
+    background-color: #DC2626;
+    border-color: #DC2626;
+    color: white;
+}
+
+
+/* --- 7. Botões Principais (Salvar e Limpar) --- */
+.acoes {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #E5E5E5;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+/* Estilo geral de todos os botões */
+button {
+    font-size: 1em;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+button:hover { opacity: 0.85; } /* Leve transparência ao passar o mouse */
+
+/* Cores específicas dos botões */
+.btn-verde { background-color: #16A34A; color: white; } /* REQUSITO */
+.btn-vermelho { background-color: #DC2626; color: white; } /* REQUSITO */
+.btn-cinza { background-color: #E5E5E5; color: #333; border: 1px solid #ccc; }
+
+
+/* --- 8. Rodapé e Mensagens de Feedback --- */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    height: 30px; /* Garante espaço para a mensagem */
+}
+
+/* Define as cores da mensagem (Verde para sucesso, Vermelho para erro) */
+#feedback-mensagem {
+    font-weight: bold;
+}
+#feedback-mensagem.sucesso { color: #16A34A; }
+#feedback-mensagem.erro { color: #DC2626; }
+#feedback-mensagem.info { color: #555; }
+
+
+/* --- 9. Animação de Fade para as Mensagens --- */
+.fade-anim {
+    animation: fadeInOut 3.5s ease-in-out forwards;
+}
+
+/*
+  0%: Começa invisível
+  25%: Aparece
+  85%: Fica visível
+  100%: Desaparece
+*/
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    25% { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+    85% { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% { 
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}

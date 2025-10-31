@@ -1,0 +1,50 @@
+{
+  "docente": "Igor Costa Gerlach",
+  "turma": "4MEC",
+  "turmaNome": "4MEC - Noite",
+  "data": "31/10/2025",
+  "alunos": [
+    {
+      "ra": "702001",
+      "nome": "Gustavo Almeida",
+      "status": "falta",
+      "observacao": ""
+    },
+    {
+      "ra": "702002",
+      "nome": "Helena Faria",
+      "status": "falta",
+      "observacao": ""
+    },
+    {
+      "ra": "702003",
+      "nome": "Igor Nogueira",
+      "status": "presente",
+      "observacao": ""
+    },
+    {
+      "ra": "702004",
+      "nome": "Juliana Prado",
+      "status": "falta",
+      "observacao": ""
+    },
+    {
+      "ra": "702005",
+      "nome": "Leonardo Sampaio",
+      "status": "falta",
+      "observacao": ""
+    },
+    {
+      "ra": "702006",
+      "nome": "Mariana Campos",
+      "status": "falta",
+      "observacao": ""
+    },
+    {
+      "ra": "702007",
+      "nome": "Nicolas Bastos",
+      "status": "falta",
+      "observacao": ""
+    }
+  ]
+}

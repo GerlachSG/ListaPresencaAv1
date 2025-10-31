@@ -1,0 +1,44 @@
+{
+  "docente": "Igor Costa Gerlach",
+  "turma": "2MEC",
+  "turmaNome": "2MEC - Tarde",
+  "data": "31/10/2025",
+  "alunos": [
+    {
+      "ra": "501001",
+      "nome": "Alexandre Borges",
+      "status": "presente",
+      "observacao": ""
+    },
+    {
+      "ra": "501002",
+      "nome": "Bruna Carvalho",
+      "status": "presente",
+      "observacao": ""
+    },
+    {
+      "ra": "501003",
+      "nome": "Caio Martins",
+      "status": "presente",
+      "observacao": "Ficou muito tempo fora de sala quando foi ao banheiro."
+    },
+    {
+      "ra": "501004",
+      "nome": "Diana Moreira",
+      "status": "falta",
+      "observacao": ""
+    },
+    {
+      "ra": "501005",
+      "nome": "Eduardo Pacheco",
+      "status": "presente",
+      "observacao": ""
+    },
+    {
+      "ra": "501006",
+      "nome": "Fernanda Teixeira",
+      "status": "presente",
+      "observacao": ""
+    }
+  ]
+}
