@@ -1,6 +1,6 @@
 # 📚 Lista de Presença (Av1)
 
-Este é um projeto de frontend simples criado para a Avaliação 1 (Av1), que simula um sistema de lista de chamada para professores. A aplicação é construída inteiramente com **HTML5**, **CSS3** e **JavaScript** puro (Vanilla JS), sem a necessidade de bibliotecas ou frameworks.
+Este é um projeto de frontend simples criado para Situação Desafiadora (Avaliação), que simula um sistema de lista de chamada para professores. A aplicação é construída inteiramente com **HTML5**, **CSS3** e **JavaScript** puro (Vanilla JS), sem a necessidade de bibliotecas ou frameworks.
 
 A aplicação permite que um docente selecione uma turma, carregue a lista de alunos dinamicamente e marque a presença ou falta, podendo salvar um registro da chamada em formato JSON.
 
@@ -16,7 +16,7 @@ A aplicação permite que um docente selecione uma turma, carregue a lista de al
 
 ## 🚀 Como Usar
 
-1.  **Abra o Projeto:** A forma mais simples de usar é abrir o arquivo `src/pages/index.html` diretamente no seu navegador.
+1.  **Abra o Projeto:** A forma mais simples de usar é abrir o `[website](https://gerlachsg.github.io/ListaPresencaAv1/src/pages/index)` diretamente no seu navegador.
 2.  **Digite seu Nome:** Insira seu nome no campo "Nome:" no cabeçalho.
 3.  **Selecione a Turma:** Na parte inferior, escolha uma turma no menu de seleção (ex: "4ADS - Noite").
 4.  **Carregue os Alunos:** Clique no botão "CARREGAR TURMA". A lista de alunos aparecerá na tabela.
